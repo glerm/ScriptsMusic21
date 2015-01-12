@@ -14,11 +14,13 @@ MIKRO=converter.parse(localfile)
 maodir=MIKRO.parts[0]
 maoesq=MIKRO.parts[1]
 
+recorte=maodir[0:2]
 
 
 #searchStream1 = stream.Stream()
 #searchStream1.append(note.Note(quarterLength = 2.0))
 #l = search.rhythmicSearch(maodir, searchStream1)
 
-
+recorte.show('text')
+#recorte.show('lily.pdf')
 
