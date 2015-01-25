@@ -1,5 +1,5 @@
-#!/usr/biNCR/eNCRv pythoNCR
-# -*- codiNCRg: utf-8 -*-
+#!/usr/bin/eNCRv python
+# -*- coding: utf-8 -*-
 from music21 import *
 import os
 import sys
