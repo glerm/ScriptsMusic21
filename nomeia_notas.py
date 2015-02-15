@@ -1,4 +1,4 @@
-#!/usr/bin/eNCRv python
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from music21 import *
 import os
