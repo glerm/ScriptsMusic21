@@ -59,6 +59,33 @@ for n in xrange(len(c1)):
 	c.addLyric(c.forteClassTn)
 	s.append(c)
 
+	### primeira e ultima notas mais 1 semitom
+	intervalo=interval.Interval(+1)
+	t1=c1[n].transpose(intervalo)
+	e2=c1[((n+2)%3)]
+	t2=e2.transpose(intervalo)
+	c=chord.Chord([t1,t2,c1[((n+2)%3)]],duration=d)
+	c.addLyric(c1[n].name+' mais 1 Semitom')
+	c.addLyric(e2.name+' mais 1 Semitom')
+	c.addLyric(c.pitchedCommonName)
+	c.addLyric(c.normalFormString)	
+	c.addLyric(c.forteClassTn)
+	s.append(c)
+
+	### primeira e ultima notas menos 1 semitom
+	intervalo=interval.Interval(-1)
+	t1=c1[n].transpose(intervalo)
+	e2=c1[((n+2)%3)]
+	t2=e2.transpose(intervalo)
+	c=chord.Chord([t1,t2,c1[((n+2)%3)]],duration=d)
+	c.addLyric(c1[n].name+' mais 1 Semitom')
+	c.addLyric(e2.name+' mais 1 Semitom')
+	c.addLyric(c.pitchedCommonName)
+	c.addLyric(c.normalFormString)	
+	c.addLyric(c.forteClassTn)
+	s.append(c)
+
+
 
 
 

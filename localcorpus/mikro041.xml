@@ -4,7 +4,7 @@
   <identification>
     <encoding>
       <software>MuseScore 1.2</software>
-      <encoding-date>2014-12-26</encoding-date>
+      <encoding-date>2015-02-16</encoding-date>
       </encoding>
     </identification>
   <defaults>
@@ -133,22 +133,6 @@
       <backup>
         <duration>6</duration>
         </backup>
-      <direction placement="above">
-        <direction-type>
-          <dynamics>
-            <p/>
-            </dynamics>
-          </direction-type>
-        <staff>2</staff>
-        <sound dynamics="54.44"/>
-        </direction>
-      <direction placement="below">
-        <direction-type>
-          <words>sempre legato</words>
-          </direction-type>
-        <staff>2</staff>
-        <sound dynamics="-1.11"/>
-        </direction>
       <note default-x="75.83" default-y="-110.00">
         <pitch>
           <step>G</step>
@@ -301,10 +285,10 @@
         <staff>2</staff>
         <beam number="1">begin</beam>
         </note>
-      <note default-x="40.30" default-y="-95.00">
+      <note default-x="40.30" default-y="-100.00">
         <pitch>
-          <step>C</step>
-          <octave>4</octave>
+          <step>B</step>
+          <octave>3</octave>
           </pitch>
         <duration>1</duration>
         <voice>5</voice>

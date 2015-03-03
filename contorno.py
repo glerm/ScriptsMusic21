@@ -1,4 +1,4 @@
-#!/usr/bin/eNCRv python
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from music21 import *
 import os
@@ -14,10 +14,12 @@ MIKRO=converter.parse(localfile)
 maodir=MIKRO.parts[0]
 maoesq=MIKRO.parts[1]
 
-#nota inicial mao esquerda Eb4
-nota_inicial_ESQ=63
-#nota inicial mao direita B4
-nota_inicial_DIR=59
+#nota inicial mao esquerda 
+IniE=note.Note(str(sys.argv[2]))
+nota_inicial_ESQ=IniE.midi
+#nota inicial mao direita 
+IniD=note.Note(str(sys.argv[3]))
+nota_inicial_DIR=IniD.midi
 
 
 #NCR = nota code or rest
