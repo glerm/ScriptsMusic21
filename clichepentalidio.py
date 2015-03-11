@@ -45,11 +45,13 @@ def clichelize(durations,motivo):
 
 # dados para teste
 # 1. duracoes com ligados
-durs1=[1.0,1.0,1.0,1.0,[2.0,'I'],[1.0,'F'],1.0,1.0,1.0,1.0,'F1']
-durs2=[1.0,0.5,[0.5,'I'],[1.0,'F'],0.5,0.5]
+durs1=[1.0,1.0,1.0, 2.0,1.0,1.0,1.0,1.0,1.0]
+durs2=[1.0,1.0,1.0,2.0]
 
 # 2. uma celula base de tres notas
-motivo=['A4','C5','F#5']
+motivo=['C4','D4','F4','G4','A4']
+
+#motivo=['E-4','E4','B-4','B4']
 
 
 # inicia um cliche vazio
@@ -58,8 +60,8 @@ cliche=stream.Stream()
 # variavel de inicio 
 Linicio=0
 
-# loop para o sorteio de 8 compassos
-for x in xrange(8):
+# loop para o sorteio de 16 compassos
+for x in xrange(16):
 	#sorteia um dos dois motivos
 	c=choice([durs1,durs2])
 
@@ -81,7 +83,7 @@ for x in xrange(8):
 	
 	
 #formatacao de uma metrica padrao para insercao, fazendo os motivos ajustarem
-cliche.makeMeasures(meterStream=meter.TimeSignature('2/4') , inPlace=True)
+cliche.makeMeasures(meterStream=meter.TimeSignature('3/4') , inPlace=True)
 	
 
 

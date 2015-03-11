@@ -2,6 +2,9 @@
 # -*- coding: utf-8 -*-
 from music21 import *
 
+#Script estudo sobre transformacoes por vizinhanca no ciclo das 3as maiores
+
+
 # acorde de 5a aumentada
 d = duration.Duration(4.0)
 duration=d
