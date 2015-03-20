@@ -3,41 +3,9 @@
 from music21 import *
 from random import *
 from copy import *
+import sys
 
 
-
-def clichelize(durations,motivo):
-		# a funcao vai formar um stream com as notas do motivo
-		# posicionadas em cliches de segmentacao dolivro mikrokosmos 01
-		cliche=stream.Stream()
-
-		# para efeito de teste inserida uma funcao que sorteia notas para usar
-		mesmo=choice(motivo)
-
-		# para cada uma das duracoes inseridas na funcao
-		for d in durations:
-
-			# testa se o elemento tem nao tem ligadura
-			if type(d) is float:	
-				nota=note.Note(choice(motivo),quarterLength=d)
-
-			# se tiver ligadura insere 
-			else:	
-				#beam: ligadura de continuacao
-				# convencionamos I para o inicio da ligadura e F para o final
-				if d[1] == 'I':
-					nota=note.Note(mesmo,quarterLength=d[0])
-					nota.tie=tie.Tie("start")
-				
-				if d[1] == 'F':
-					nota=note.Note(mesmo,quarterLength=d[0])
-					nota.tie=tie.Tie("stop")
-
-			# faz uma copia da nota criada para usar no cliche
-			cliche.append(deepcopy(nota))
-
-		# retorna o cliche para a chamada da funcao
-		return cliche
 
 
 
@@ -98,6 +66,20 @@ def escalachoice(escala,tom,inicio,fim):
 	return e[int(inicio):int(fim)]
 
 
+escala=sys.argv[1]
+tom=sys.argv[2]
+inicio=sys.argv[3]
+fim=sys.argv[4]
+
+
+#escala_melodia.reverse()
+
+s= escalachoice(escala,tom,inicio,fim)
+
+
+
+for n in s:
+	print n
 
 
 
